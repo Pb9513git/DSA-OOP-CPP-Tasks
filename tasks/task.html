@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Event Image</title>
+</head>
+<body>
+
+    <picture>
+        <!-- Art direction for the smallest screen -->
+        <source media="(max-width: 600px)" srcset="image_600px.webp" type="image/webp">
+        <source media="(max-width: 600px)" srcset="image_600px.jpg" type="image/jpeg">
+        
+        <!-- Standard responsive images -->
+        <source media="(max-width: 1500px)" srcset="image_1500px.webp" type="image/webp">
+        <source media="(max-width: 1500px)" srcset="image_1500px.jpg" type="image/jpeg">
+        
+        <source media="(min-width: 1501px)" srcset="image_2500px.webp" type="image/webp">
+        <source media="(min-width: 1501px)" srcset="image_2500px.jpg" type="image/jpeg">
+        
+        <!-- Fallback for browsers that don't support <picture> -->
+        <img src="image_1500px.jpg" alt="Event image" style="width: 100%; height: auto;">
+    </picture>
+
+</body>
+</html>
